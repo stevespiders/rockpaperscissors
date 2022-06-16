@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+       function playGame(playerselection, computerSelection) {
+
+           switch(playerselection){
+            case 'rock':
+              if (computerSelection === 'scissors' ) {
+                alert('You Win');
+            } else if (computerSelection === playerselection){
+                alert('Draw');
+            } else  {
+                alert('You lose');
+            }
+            break;
+            case 'scissors':
+              if (computerSelection === 'paper' ) {
+                alert('You Win');
+            } else if (computerSelection === playerselection){
+                alert('Draw');
+            } else  {
+                alert('You lose');
+            }
+            break;
+
+            case 'paper':
+              if (computerSelection === 'rock' ) {
+                alert('You Win');
+            } else if (computerSelection === playerselection){
+                alert('Draw');
+            } else  {
+                alert('You lose');
+            }
+            break;
+            default:
+                alert ('error');
+
+        }
+    }
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
