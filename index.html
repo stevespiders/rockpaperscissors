@@ -7,23 +7,37 @@
     <title>Document</title>
 
     <script>
+   
+    
 
-       function playGame(playerselection, computerSelection) {
+   function computerChoice (){
+        let computerOptions = ['rock', 'paper','scissors'];
+        var computerSelection = computerOptions[Math.floor(Math.random() * (3 - 0) + 0)];
+    
+        return computerSelection;
+       
+    }
+    
+  
 
-           switch(playerselection){
+
+
+       function playGame(playerSelection, computerChoice) {
+
+           switch(playerSelection){
             case 'rock':
-              if (computerSelection === 'scissors' ) {
+              if (computerChoice === 'scissors' ) {
                 alert('You Win');
-            } else if (computerSelection === playerselection){
+            } else if (computerChoice === playerSelection){
                 alert('Draw');
             } else  {
                 alert('You lose');
             }
             break;
             case 'scissors':
-              if (computerSelection === 'paper' ) {
+              if (computerChoice === 'paper' ) {
                 alert('You Win');
-            } else if (computerSelection === playerselection){
+            } else if (computerChoice === playerSelection){
                 alert('Draw');
             } else  {
                 alert('You lose');
@@ -31,9 +45,9 @@
             break;
 
             case 'paper':
-              if (computerSelection === 'rock' ) {
+              if (computerChoice === 'rock' ) {
                 alert('You Win');
-            } else if (computerSelection === playerselection){
+            } else if (computerChoice === playerSelection){
                 alert('Draw');
             } else  {
                 alert('You lose');
@@ -43,6 +57,12 @@
                 alert ('error');
 
         }
+    }
+
+    function play () {
+    let playerSelection = prompt('rock, paper, scissors');
+    let computer = computerChoice();
+    playGame(playerSelection, computer);   
     }
 
     </script>
