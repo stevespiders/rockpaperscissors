@@ -8,7 +8,8 @@
 
     <script>
    
-    
+    let playerScore = 0;
+    let computerScore = 0;
 
    function computerPlay (){
         let computerOptions = ['rock', 'paper','scissors'];
@@ -18,35 +19,42 @@
        
     }
 
+ 
        function playGame(playerSelection, computerChoice) {
 
            switch(playerSelection){
             case 'rock':
               if (computerChoice === 'scissors' ) {
                 alert('You Win');
+                playerScore++;
             } else if (computerChoice === playerSelection){
                 alert('Draw');
             } else  {
                 alert('You lose');
+                computerScore++;
             }
             break;
             case 'scissors':
               if (computerChoice === 'paper' ) {
                 alert('You Win');
+                playerScore++;
             } else if (computerChoice === playerSelection){
                 alert('Draw');
             } else  {
                 alert('You lose');
+                computerScore++;
             }
             break;
 
             case 'paper':
               if (computerChoice === 'rock' ) {
                 alert('You Win');
+                playerScore++;
             } else if (computerChoice === playerSelection){
                 alert('Draw');
             } else  {
                 alert('You lose');
+                computerScore++;
             }
             break;
             default:
@@ -56,27 +64,36 @@
     }
 
     function play () {
-    let playerSelection = prompt('rock, paper, scissors');
-    let lowerCasePlayerSelection = playerSelection.toLowerCase();
-    console.log(lowerCasePlayerSelection);
-    let computer = computerPlay();
-    playGame(lowerCasePlayerSelection, computer); 
-    return lowerCasePlayerSelection  
+        let playerSelection = prompt('rock, paper, scissors');
+        let lowerCasePlayerSelection = playerSelection.toLowerCase();
+        console.log(lowerCasePlayerSelection);
+        let computer = computerPlay();
+
+        playGame(lowerCasePlayerSelection, computer); 
+        return lowerCasePlayerSelection  
     }
 
-    function trackScore () {
-
-    }
 
     function game() { 
-
     for (let i = 0; i <5; i++) {
          play();
+         console.log(`You have ${playerScore} points & the computer has ${computerScore} points.` )
+
+    }
+    
+    if (playerScore > computerScore) {console.log('YOU WON CHAMP')
+    }   else { console.log('Better luck next time.')}
+
+    resetGame();
 
     }
 
-    }
 
+    function resetGame() {
+        playerScore = 0;
+        computerScore = 0;
+
+    }
     </script>
 
 
