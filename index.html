@@ -10,17 +10,13 @@
    
     
 
-   function computerChoice (){
+   function computerPlay (){
         let computerOptions = ['rock', 'paper','scissors'];
         var computerSelection = computerOptions[Math.floor(Math.random() * (3 - 0) + 0)];
-    
+        console.log(computerSelection);
         return computerSelection;
        
     }
-    
-  
-
-
 
        function playGame(playerSelection, computerChoice) {
 
@@ -61,8 +57,24 @@
 
     function play () {
     let playerSelection = prompt('rock, paper, scissors');
-    let computer = computerChoice();
-    playGame(playerSelection, computer);   
+    let lowerCasePlayerSelection = playerSelection.toLowerCase();
+    console.log(lowerCasePlayerSelection);
+    let computer = computerPlay();
+    playGame(lowerCasePlayerSelection, computer); 
+    return lowerCasePlayerSelection  
+    }
+
+    function trackScore () {
+
+    }
+
+    function game() { 
+
+    for (let i = 0; i <5; i++) {
+         play();
+
+    }
+
     }
 
     </script>
