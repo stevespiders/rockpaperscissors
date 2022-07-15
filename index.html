@@ -5,101 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <script>
-   
-    let playerScore = 0;
-    let computerScore = 0;
-
-   function computerPlay (){
-        let computerOptions = ['rock', 'paper','scissors'];
-        var computerSelection = computerOptions[Math.floor(Math.random() * (3 - 0) + 0)];
-        console.log(computerSelection);
-        return computerSelection;
-       
-    }
-
- 
-       function playGame(playerSelection, computerChoice) {
-
-           switch(playerSelection){
-            case 'rock':
-              if (computerChoice === 'scissors' ) {
-                alert('You Win');
-                playerScore++;
-            } else if (computerChoice === playerSelection){
-                alert('Draw');
-            } else  {
-                alert('You lose');
-                computerScore++;
-            }
-            break;
-            case 'scissors':
-              if (computerChoice === 'paper' ) {
-                alert('You Win');
-                playerScore++;
-            } else if (computerChoice === playerSelection){
-                alert('Draw');
-            } else  {
-                alert('You lose');
-                computerScore++;
-            }
-            break;
-
-            case 'paper':
-              if (computerChoice === 'rock' ) {
-                alert('You Win');
-                playerScore++;
-            } else if (computerChoice === playerSelection){
-                alert('Draw');
-            } else  {
-                alert('You lose');
-                computerScore++;
-            }
-            break;
-            default:
-                alert ('error');
-
-        }
-    }
-
-    function play () {
-        let playerSelection = prompt('rock, paper, scissors');
-        let lowerCasePlayerSelection = playerSelection.toLowerCase();
-        console.log(lowerCasePlayerSelection);
-        let computer = computerPlay();
-
-        playGame(lowerCasePlayerSelection, computer); 
-        return lowerCasePlayerSelection  
-    }
-
-
-    function game() { 
-    for (let i = 0; i <5; i++) {
-         play();
-         console.log(`You have ${playerScore} points & the computer has ${computerScore} points.` )
-
-    }
-    
-    if (playerScore > computerScore) {console.log('YOU WON CHAMP')
-    }   else { console.log('Better luck next time.')}
-
-    resetGame();
-
-    }
-
-
-    function resetGame() {
-        playerScore = 0;
-        computerScore = 0;
-
-    }
-    </script>
-
-
-
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@900&family=Roboto:ital,wght@1,100&display=swap');
+    </style>
+    <script src="app-js.js" defer> </script>
 </head>
 <body>
-    
+
+    <h1 id="game-title">ROCK, PAPER, SCISSORS: MOVIE EDITION!</h1>
+    <div class="game-result">
+        <p id="game-result-display"></p>
+        <button id="play-again">Click to play again!</button>
+    </div>
+<div class="game-scores">
+    <div class="score-tile">
+        <h3 class='score' id="human-score">0</h3>
+        <h1 class="score-board-headers" id="human-header">Player</h1>
+    </div>
+
+    <div class="score-tile">
+        <h3 class='score' id="machine-score">0</h3>
+        <h1 class="score-board-headers" id="machine-header">Computer</h1>
+    </div>
+
+</div>
+<div>
+    <img id ="image-update" src="" alt="player choice">
+</div>
+
+<div class="game-board-area">
+      
+    <div class="buttons">
+        <div class="button-div">
+            <img src ='images/movie-rock.png' class="button-select" value="rock">
+            <h1 class="choice-text">ROCK</h1>
+        </div>
+        <div class="button-div">
+            <img src ='images/movie-paper.png' class="button-select" value="paper">
+            <h1 class="choice-text">PAPER</h1>
+        </div>
+        <div class="button-div">
+            <img src ='images/movie-scissor.png' class="button-select" value="scissors">
+            <h1 class="choice-text">SCISSORS</h1>
+        </div>
+    </div>
+
+</div>
+
+    <div class="game-instructions">
+        <p>Welcome to the classic game of rock, paper, scissors Movie edition! Where instead of choosing a classic 
+            object to play, you choose famous movie characters!
+        </p>
+        <ul class="character-list">
+            <li>The Rock is well...you got it</li>
+            <li>Deadpool holding paper is (please you must get it)</li>
+            <li>And Johnny Depp as Edward Scissors represents, well if you don't know don't play the game</li>
+        </ul>
+        <p>Same rules apply. Paper beats rock, Scissors beat paper, and rock beats scissors</p>
+        <p>You will be playing the computer. The first to 5 wins!!!</p>
+        <p>GOOD LUCK!</p>
+    </div>
+    <button id="start-game">Start Game</button>
+
 </body>
 </html>

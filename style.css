@@ -1,0 +1,107 @@
+body{
+text-align: center;
+background-color: aliceblue;
+}
+
+h1{
+    margin:0px;
+}
+
+.score{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 100px;
+    margin:0px;
+}
+#game-title{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 64px;
+    margin:0px;
+}
+#game-start{
+    background-color: red;
+}
+
+.score-board-headers {
+    margin:0px 5px;
+}
+
+.game-board-area{
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+display: flex;
+justify-content: center;
+}
+
+.button-select{
+    object-fit: contain;
+    height: 200px;
+    width: 250px; 
+}
+
+.button-select:hover{
+    object-fit: contain;
+    height: 240px;
+    width: 300px; 
+    cursor: pointer;
+    background-color: aquamarine;
+
+}
+
+.button-div:hover{
+    background-color: aquamarine;
+
+}
+
+.human-machine-score{
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+.character-list{
+    list-style: none;
+}
+
+.game-instructions{
+    background-color: white;
+    width: 50%;
+    padding: 10px;
+    margin: 0px auto;
+}
+
+#play-again{
+    display:none;
+    height: 20px;
+    margin: 0px 15px;
+}
+
+.game-scores{
+    display: flex;
+    justify-content: center;
+
+}
+
+.score-tile{
+    margin: 10px 50px;
+}
+
+#game-result-display{
+    font-size: 32px;
+}
+
+.game-result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-update{
+    display:none;
+    object-fit: contain;
+    height: 200px;
+    width: 250px;
+}
